@@ -1,2 +1,2 @@
 #!/bin/sh
-meteor --port=3001
+meteor --port=3002

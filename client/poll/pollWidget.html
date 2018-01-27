@@ -1,0 +1,37 @@
+<template name="pollWidget">
+  <div class="block block-poll">
+    <div class="sidebar-bar-title">
+      <h3>Community Poll</h3>
+    </div>
+    <form id="pollForm" action="#" method="post" onsubmit="return validatePollAnswerIsSelected();">
+      <div class="block-content">
+        <p class="block-subtitle">What is your favorite color</p>
+        <ul id="poll-answers">
+          <li class="odd">
+            <input type="radio" name="vote" class="radio poll_vote" id="vote_1" value="1">
+            <span class="label">
+            <label for="vote_1">Green</label>
+            </span> </li>
+          <li class="even">
+            <input type="radio" name="vote" class="radio poll_vote" id="vote_2" value="2">
+            <span class="label">
+            <label for="vote_2">Red</label>
+            </span> </li>
+          <li class="odd">
+            <input type="radio" name="vote" class="radio poll_vote" id="vote_3" value="3">
+            <span class="label">
+            <label for="vote_3">Black</label>
+            </span> </li>
+          <li class="last even">
+            <input type="radio" name="vote" class="radio poll_vote" id="vote_4" value="4">
+            <span class="label">
+            <label for="vote_4">Magenta</label>
+            </span> </li>
+        </ul>
+        <div class="actions">
+          <button type="submit" title="Vote" class="button button-vote"><span>Vote</span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</template>

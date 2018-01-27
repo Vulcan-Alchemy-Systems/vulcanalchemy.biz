@@ -1,0 +1,159 @@
+<template name="categoryList">
+  {{> breadcrumb}}
+  <div class="main-container col2-left-layout">
+    <div class="container">
+      <div class="row">
+        <div class="col-main col-sm-9 col-xs-12 col-sm-push-3">
+          {{> categorySlider}}
+          <div class="shop-inner">
+            <div class="page-title">
+              <h2>iPhone 6</h2>
+            </div>
+
+            <!-- toolbar -->
+            <div class="toolbar">
+              <div class="view-mode">
+                <ul>
+                  <li class="active"> <a href="shop_grid.html"> <i class="fa fa-th-large"></i> </a> </li>
+                  <li> <a href="shop_list.html"> <i class="fa fa-th-list"></i> </a> </li>
+                </ul>
+              </div>
+              <div class="sorter">
+                <div class="short-by">
+                  <label>Sort By:</label>
+                  <select>
+                    <option selected="selected">Position</option>
+                    <option>Name</option>
+                    <option>Price</option>
+                    <option>Size</option>
+                  </select>
+                </div>
+                <div class="short-by page">
+                  <label>Show:</label>
+                  <select>
+                    <option selected="selected">18</option>
+                    <option>20</option>
+                    <option>25</option>
+                    <option>30</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- product grid -->
+            <div class="product-grid-area">
+              <ul class="products-grid">
+                <li class="item col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
+                  <div class="product-item">
+                    <div class="item-inner">
+                      <div class="product-thumbnail">
+
+                        <div class="icon-new-label new-left">New</div>
+
+                        <div class="pr-img-area">
+                          <a title="Ipsums Dolors Untra" href="/shop/category/sub-category/product-slug">
+                            <figure>
+                              <img class="first-img" src="/images/products/product-1.jpg" alt="HTML template">
+                              <img class="hover-img" src="/images/products/product-1.jpg" alt="HTML template">
+                            </figure>
+                          </a>
+                        </div>
+
+                        <div class="pr-info-area">
+                          <div class="pr-button">
+                            <div class="mt-button add_to_wishlist">
+                              <a href="wishlist.html">
+                                <i class="fa fa-heart"></i>
+                              </a>
+                            </div>
+                            <div class="mt-button add_to_compare">
+                              <a href="compare.html">
+                                <i class="fa fa-signal"></i>
+                              </a>
+                            </div>
+                            <div class="mt-button quick-view">
+                              <a href="quick_view.html">
+                                <i class="fa fa-search"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="item-info">
+                        <div class="info-inner">
+                          <div class="item-title">
+                            <a title="Ipsums Dolors Untra" href="/shop/category/sub-category/product-slug">Ipsums Dolors Untra</a>
+                          </div>
+                          <div class="item-content">
+                            <div class="rating">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o"></i>
+                              <i class="fa fa-star-o"></i>
+                              <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="item-price">
+                              <div class="price-box">
+                                <span class="regular-price">
+                                  <span class="price">$125.00</span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="pro-action">
+                              <button type="button" class="add-to-cart"><span> Add to Cart</span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- pagination -->
+            <div class="pagination-area">
+              <ul>
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <aside class="sidebar col-sm-3 col-xs-12 col-sm-pull-9">
+          {{> categoryWidget}}
+          <div class="block shop-by-side">
+            <div class="sidebar-bar-title">
+              <h3>Shop By</h3>
+            </div>
+            <div class="block-content">
+              <p class="block-subtitle">Shopping Options</p>
+              <div class="layered-Category">
+                <h2 class="saider-bar-title">Categories</h2>
+                <div class="layered-content">
+                  {{> categoryFilter}}
+                </div>
+              </div>
+              {{> manufacturerFilter}}
+              {{> colorFilter}}
+              {{> sizeFilter}}
+            </div>
+          </div>
+          {{> priceFilter}}
+          {{> cartWidget}}
+          {{> compareWidget}}
+          {{> productSpecialWidget}}
+          {{> tagFilter}}
+          {{> pollWidget}}
+          <div class="offer-banner"><img src="/images/offer-banner.jpg" alt="banner"></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  {{> service}}
+</template>

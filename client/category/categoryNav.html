@@ -1,0 +1,31 @@
+<template name="categoryNav">
+  {{#if Template.subscriptionsReady}}
+  <div class="mega-menu-title">
+    <h3><span>All Categories</span></h3>
+  </div>
+  <div class="mega-menu-category">
+    <ul class="nav">
+      {{#each categories}}
+      <li><a href="#">{{name}}</a>
+        <div class="wrap-popup">
+          <div class="popup">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <h3>{{name}}</h3>
+                <ul class="nav">
+                  {{#each subCategory}}
+                  <li><a href="/shop/{{categorySlug}}/{{slug}}">{{name}}</a></li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      {{else}}
+      <li><a href="#" title="No categories">No Categories</a></li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+</template>

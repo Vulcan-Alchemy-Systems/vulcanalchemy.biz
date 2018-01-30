@@ -1,5 +1,5 @@
 <template name="categoryList">
-  {{> breadcrumb}}
+  {{#if Template.subscriptionsReady}}
   <div class="main-container col2-left-layout">
     <div class="container">
       <div class="row">
@@ -43,6 +43,7 @@
             <!-- product grid -->
             <div class="product-grid-area">
               <ul class="products-grid">
+                {{#each products}}
                 <li class="item col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
                   <div class="product-item">
                     <div class="item-inner">
@@ -109,6 +110,11 @@
                     </div>
                   </div>
                 </li>
+                {{else}}
+                <li class="item col-xs-12">
+                  No products found
+                </li>
+                {{/each}}
               </ul>
             </div>
 
@@ -121,7 +127,6 @@
                 <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
               </ul>
             </div>
-
           </div>
         </div>
         <aside class="sidebar col-sm-3 col-xs-12 col-sm-pull-9">
@@ -154,6 +159,6 @@
       </div>
     </div>
   </div>
-
   {{> service}}
+  {{/if}}
 </template>

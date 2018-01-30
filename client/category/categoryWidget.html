@@ -4,21 +4,17 @@
       <h3>Categories</h3>
     </div>
     <ul class="product-categories">
-      <li class="cat-item current-cat cat-parent"><a href= "shop_grid.html">Women</a>
+      {{#each categories}}
+      <li class="cat-item current-cat cat-parent"><a href="/shop/{{slug}}" title="{{name}}">{{name}}</a>
         <ul class="children">
-          <li class="cat-item cat-parent"><a href="shop_grid.html"><i class="fa fa-angle-right"></i>&nbsp; Accessories</a>
-            <ul class="children">
-              <li class="cat-item"><a href="shop_grid.html"><i class="fa fa-angle-right"></i>&nbsp; Dresses</a></li>
-              <li class="cat-item cat-parent"><a href="shop_grid.html"><i class="fa fa-angle-right"></i>&nbsp; Handbags</a>
-                <ul  class="children">
-                  <li class="cat-item"><a href="shop_grid.html"><i class="fa fa-angle-right"></i>&nbsp; Beaded Handbags</a></li>
-                  <li class="cat-item"><a href="shop_grid.html"><i class="fa fa-angle-right"></i>&nbsp; Sling bag</a></li>
-                </ul>
-              </li>
-            </ul>
+          {{#each subCategory}}
+          <li class="cat-item cat-parent">
+            <a href="/shop/{{categorySlug}}/{{slug}}" title="{{name}}"><i class="fa fa-angle-right"></i>{{name}}</a>
           </li>
+          {{/each}}
         </ul>
       </li>
+      {{/each}}
     </ul>
   </div>
 </template>
